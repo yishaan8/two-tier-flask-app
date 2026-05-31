@@ -48,7 +48,7 @@ post {
                 emailext from: 'yishaan8@gmail.com',
                 subject: "Build success",
                 body: 'Build success',
-                to: 'yishaan8@gmail.com',
+                to: 'yishaan8@gmail.com'
             }
         }
   failure {
@@ -56,7 +56,7 @@ post {
                 emailext from: 'yishaan8@gmail.com',
                 subject: "Build unsuccessful",
                 body: 'Build unsuccessful',
-                to: 'yishaan8@gmail.com',
+                to: 'yishaan8@gmail.com'
             }
         }
 }
