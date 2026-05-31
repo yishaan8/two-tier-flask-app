@@ -42,20 +42,22 @@ pipeline {
             }
         }
     }
-post{
-    success {
-        emailtext(
-            subject:"Build successful",
-            body:"Your build was successful",
-            to:"yishaan8@gmail.com"
-        )
-    }
-    failure{
-         emailtext(
-            subject:"Build unsuccessful",
-            body:"Your build was unsuccessful!!",
-            to:"yishaan8@gmail.com"
-        )
-    }
+post {
+        success {
+            script {
+                emailext from: 'yishaan8@gmail.com',
+                subject: "Build success",
+                body: 'Build success',
+                to: 'yishaan8@gmail.com',
+            }
+        }
+  failure {
+            script {
+                emailext from: 'yishaan8@gmail.com',
+                subject: "Build unsuccessful",
+                body: 'Build unsuccessful',
+                to: 'yishaan8@gmail.com',
+            }
+        }
 }
 }
